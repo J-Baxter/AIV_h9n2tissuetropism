@@ -1,0 +1,215 @@
+IQ-TREE version 3.1.3 for Linux x86 64-bit built Jul 26 2026
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    mvm-eb-w24001 (AVX512, FMA3, 93 GB RAM)
+Command: iqtree -m HKY+R4 -s HA.fas -czb -nt AUTO -B 1000 -redo
+Seed:    507543 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Sep 18 11:18:24 2026
+Kernel:  AVX+FMA - auto-detect threads (32 CPU cores detected)
+
+Reading alignment file HA.fas ... Fasta format detected
+Reading fasta file: done in 0.000412941 secs using 96.62% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.00244093 secs using 2012% CPU
+WARNING: 80 sites contain only gaps or ambiguous characters.
+Alignment has 33 sequences with 1709 columns, 471 distinct patterns
+372 parsimony-informative, 183 singleton sites, 1154 constant sites
+                                  Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 4.19617e-05 secs using 2297% CPU
+   1  A/Chicken/HongKong/G9/1997          4.68%    passed     95.57%
+   2  A/chicken/Shanghai/F/1998           4.68%    passed     99.62%
+   3  A/chicken/Hebei/1/1999              4.68%    passed     95.89%
+   4  A/chicken/Shandong/98               4.68%    passed     97.01%
+   5  A/chicken/Shandong/2h/2001          4.68%    passed     99.65%
+   6  A/chicken/Anhui/2h/2002             4.80%    passed     86.36%
+   7  A/chicken/Tianjin/L2/2001           4.68%    passed     99.54%
+   8  A/chicken/Shandong/LY/2003          4.68%    passed     98.89%
+   9  A/chicken/Shandong/ZB/2007          4.68%    passed     99.81%
+  10  A/chicken/Beijing/7/2005            4.68%    passed     98.03%
+  11  A/chicken/Shandong/22/2008          4.68%    passed     77.63%
+  12  A/chicken/Shandong/zc12/2009        4.68%    passed     96.58%
+  13  A/chicken/Hebei/YT/2010             4.68%    passed     97.47%
+  14  A/chicken/Henan/DY/2009             4.68%    passed     97.28%
+  15  A/chicken/Shandong/06/2011          4.68%    passed     86.64%
+  16  A/chicken/Jiangsu/TS/2010           5.03%    passed     93.92%
+  17  A/chicken/Shandong/qd1115/2012      4.68%    passed     99.43%
+  18  A/chicken/Liaoning/0517/2013        4.68%    passed     99.00%
+  19  A/chicken/Shandong/F0506-42/2017    4.80%    passed     94.54%
+  20  A/Chicken/Hebei/F-CH/2018           4.80%    passed     96.56%
+  21  A/chicken/Tianjin/11/2014           4.86%    passed     98.52%
+  22  A/chicken/Shandong/0202-1/2015      4.68%    passed     99.03%
+  23  A/chicken/Hebei/M1211-20/2016       4.68%    passed     99.47%
+  24  A/chicken/Shandong/M0515-1/2017     4.80%    passed     98.48%
+  25  A/Anhui-Lujiang/39/2018             4.68%    passed     98.29%
+  26  A/Chicken/Guangdong/F0106/2020      4.74%    passed     92.03%
+  27  A/Chicken/NingXia/M2309-934/2023    4.74%    passed     99.88%
+  28  A/chicken/Ningxia/F0331/2021        4.68%    passed     97.04%
+  29  A/chicken/Ningxia/ZW01/2021         4.80%    passed     98.17%
+  30  A/Chicken/Shandong/F122401/2021     4.80%    passed     95.98%
+  31  A/Chicken/Shandong/F122402/2021     4.97%    passed     98.48%
+  32  A/Chicken/Shandong/F0106_BZ/2022    4.80%    passed     89.85%
+  33  A/chicken/Anhui/M1029TC11/2024      4.68%    passed     99.70%
+****  TOTAL                               4.73%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+Checking for duplicate sequences: done in 0.000128984 secs using 2462% CPU
+Creating fast initial parsimony tree by random order stepwise addition...
+0.081 seconds, parsimony score: 1056 (based on 555 sites)
+Generating 1000 samples for ultrafast bootstrap (seed: 507543)...
+
+NOTE: 3 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 32 CPU cores
+Increase to 10 rounds for branch lengths
+3096 trees examined
+Threads: 1 / Time: 32.011 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -13193
+Threads: 2 / Time: 22.292 sec / Speedup: 1.436 / Efficiency: 72% / LogL: -13193
+Threads: 3 / Time: 17.806 sec / Speedup: 1.798 / Efficiency: 60% / LogL: -13193
+Threads: 4 / Time: 15.918 sec / Speedup: 2.011 / Efficiency: 50% / LogL: -13193
+Threads: 5 / Time: 14.912 sec / Speedup: 2.147 / Efficiency: 43% / LogL: -13193
+Determining AUTO threadcount: done in 102.939 secs using 264.9% CPU
+BEST NUMBER OF THREADS: 4
+
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -8721.119
+2. Current log-likelihood: -8391.123
+3. Current log-likelihood: -8385.996
+4. Current log-likelihood: -8382.807
+5. Current log-likelihood: -8379.516
+6. Current log-likelihood: -8376.114
+7. Current log-likelihood: -8372.595
+8. Current log-likelihood: -8368.949
+9. Current log-likelihood: -8365.168
+10. Current log-likelihood: -8361.242
+11. Current log-likelihood: -8357.160
+12. Current log-likelihood: -8352.908
+13. Current log-likelihood: -8348.473
+14. Current log-likelihood: -8343.839
+15. Current log-likelihood: -8338.988
+16. Current log-likelihood: -8333.900
+17. Current log-likelihood: -8328.550
+18. Current log-likelihood: -8322.913
+19. Current log-likelihood: -8316.956
+20. Current log-likelihood: -8310.644
+21. Current log-likelihood: -8303.931
+22. Current log-likelihood: -8296.766
+23. Current log-likelihood: -8289.089
+24. Current log-likelihood: -8280.822
+25. Current log-likelihood: -8271.874
+26. Current log-likelihood: -8262.133
+27. Current log-likelihood: -8251.457
+28. Current log-likelihood: -8239.673
+29. Current log-likelihood: -8226.563
+30. Current log-likelihood: -8211.870
+31. Current log-likelihood: -8195.311
+32. Current log-likelihood: -8176.693
+33. Current log-likelihood: -8156.324
+34. Current log-likelihood: -8123.344
+Optimal log-likelihood: -8123.291
+Rate parameters:  A-C: 1.00000  A-G: 9.53046  A-T: 1.00000  C-G: 1.00000  C-T: 9.53046  G-T: 1.00000
+Base frequencies:  A: 0.342  C: 0.188  G: 0.228  T: 0.242
+Site proportion and rates:  (0.356,0.053) (0.260,0.224) (0.229,1.465) (0.155,3.784)
+Parameters optimization took 34 rounds (0.229 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.000661135 secs using 404% CPU
+Computing ML distances took 0.000695 sec (of wall-clock time) 0.002781 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 3.38554e-05 secs using 546.4% CPU
+Constructing RapidNJ tree: done in 0.000234127 secs using 312.2% CPU
+Computing RapidNJ tree took 0.000292 sec (of wall-clock time) 0.000990 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -8121.375
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.027 second
+Computing log-likelihood of 98 initial trees ... 0.084 seconds
+Current best score: -8111.709
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -8111.273
+Iteration 10 / LogL: -8111.299 / Time: 0h:1m:43s
+Iteration 20 / LogL: -8111.304 / Time: 0h:1m:43s
+Finish initializing candidate tree set (1)
+Current best tree score: -8111.273 / CPU time: 0.259
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -8111.274 / Time: 0h:1m:43s (0h:4m:13s left)
+Iteration 40 / LogL: -8111.499 / Time: 0h:1m:43s (0h:2m:42s left)
+Iteration 50 / LogL: -8111.304 / Time: 0h:1m:43s (0h:1m:48s left)
+Log-likelihood cutoff on original alignment: -8142.085
+Iteration 60 / LogL: -8111.293 / Time: 0h:1m:44s (0h:1m:12s left)
+Iteration 70 / LogL: -8111.346 / Time: 0h:1m:44s (0h:0m:46s left)
+Iteration 80 / LogL: -8111.285 / Time: 0h:1m:44s (0h:0m:27s left)
+Iteration 90 / LogL: -8111.285 / Time: 0h:1m:44s (0h:0m:12s left)
+Iteration 100 / LogL: -8160.125 / Time: 0h:1m:44s (0h:0m:1s left)
+Log-likelihood cutoff on original alignment: -8141.458
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:1m:44s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -8111.273
+2. Current log-likelihood: -8111.260
+3. Current log-likelihood: -8111.248
+4. Current log-likelihood: -8111.235
+5. Current log-likelihood: -8111.223
+6. Current log-likelihood: -8111.211
+7. Current log-likelihood: -8111.199
+8. Current log-likelihood: -8111.187
+9. Current log-likelihood: -8111.175
+10. Current log-likelihood: -8111.164
+11. Current log-likelihood: -8111.152
+12. Current log-likelihood: -8111.141
+13. Current log-likelihood: -8111.130
+14. Current log-likelihood: -8111.119
+15. Current log-likelihood: -8111.108
+16. Current log-likelihood: -8111.098
+17. Current log-likelihood: -8111.087
+18. Current log-likelihood: -8111.077
+19. Current log-likelihood: -8111.066
+20. Current log-likelihood: -8111.056
+21. Current log-likelihood: -8111.045
+22. Current log-likelihood: -8111.035
+23. Current log-likelihood: -8111.025
+24. Current log-likelihood: -8111.015
+25. Current log-likelihood: -8111.004
+Optimal log-likelihood: -8110.994
+Rate parameters:  A-C: 1.00000  A-G: 9.66722  A-T: 1.00000  C-G: 1.00000  C-T: 9.66722  G-T: 1.00000
+Base frequencies:  A: 0.342  C: 0.188  G: 0.228  T: 0.242
+Site proportion and rates:  (0.360,0.053) (0.262,0.218) (0.260,1.717) (0.119,4.033)
+Parameters optimization took 25 rounds (0.153 sec)
+BEST SCORE FOUND : -8110.994
+Creating bootstrap support values...
+Split supports printed to NEXUS file HA.fas.splits.nex
+Collapsing near-zero internal branches... 0 collapsed
+Total tree length: 0.702
+
+Total number of iterations: 102
+CPU time used for tree search: 5.967 sec (0h:0m:5s)
+Wall-clock time used for tree search: 1.470 sec (0h:0m:1s)
+Total CPU time used: 282.941 sec (0h:4m:42s)
+Total wall-clock time used: 104.928 sec (0h:1m:44s)
+
+Computing bootstrap consensus tree...
+Reading input file HA.fas.splits.nex...
+33 taxa and 114 splits.
+Consensus tree written to HA.fas.contree
+Reading input trees file HA.fas.contree
+Log-likelihood of consensus tree: -8110.994
+
+Analysis results written to: 
+  IQ-TREE report:                HA.fas.iqtree
+  Maximum-likelihood tree:       HA.fas.treefile
+  Likelihood distances:          HA.fas.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          HA.fas.splits.nex
+  Consensus tree:                HA.fas.contree
+  Screen log file:               HA.fas.log
+
+Date and Time: Fri Sep 18 11:20:09 2026
