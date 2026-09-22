@@ -46,7 +46,7 @@ pp_check(model_phylo_ppc)
 # br() = brms residual variance parameterization
 
 model_phylo <- brm(
-  day5_nasal_mean_std ~ isolation_year_std + (1|gr(strain, cov = A)),
+  day5_lung_mean_std ~ isolation_year_std + (1|gr(strain, cov = A)),
   data = data_std,
   data2 = list(A = A),
   family = gaussian(),
@@ -94,18 +94,44 @@ model_null <- brm(
 # Predictions
 
 # The entire dataset is replicated once for each unique combination of variables, and predictions are made
-predictions(model_phylo,
+posterior_prediction <- predictions(model_phylo,
             by ='isolation_year_std',
             conf_level = 0.9,
             type = "response", # posterior draws of the expected value 
             newdata = NULL # Unit-level predictions for each observed value in the dataset (empirical distribution)
 ) %>% 
   mutate(isolation_year = isolation_year_std * sd(data$isolation_year) + mean(data$isolation_year),
-         across(c(estimate, conf.low, conf.high), .fns = ~.x * sd(data$day5_nasal_mean) + mean(data$day5_nasal_mean))) %>% 
+         across(c(estimate, conf.low, conf.high), .fns = ~.x * sd(data$day5_lung_mean) + mean(data$day5_lung_mean))) %>% 
   ggplot(aes(x = isolation_year)) +
   geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = 0.7, fill = 'grey') + 
   geom_line(aes(y = estimate)) +
-  geom_point(data = data, aes(x = isolation_year, y = day5_nasal_mean))
+  geom_point(data = data, aes(x = isolation_year, y = day5_lung_mean)) +
+  theme_bw() + 
+  ylab('Day 5 Lung Titre') + 
+  xlab('Isolation Year')
+
+
+conditional_effect <- predictions(model_phylo,
+            by ='isolation_year_std',
+            conf_level = 0.9,
+
+            re_formula = NA,
+            newdata = NULL # Unit-level predictions for each observed value in the dataset (empirical distribution)
+) %>% 
+  mutate(isolation_year = isolation_year_std * sd(data$isolation_year) + mean(data$isolation_year),
+         across(c(estimate, conf.low, conf.high), .fns = ~.x * sd(data$day5_lung_mean) + mean(data$day5_lung_mean)))%>% 
+  ggplot(aes(x = isolation_year)) +
+  geom_ribbon(aes(ymin = conf.low, ymax = conf.high), alpha = 0.7, fill = 'grey') + 
+  geom_line(aes(y = estimate)) +
+  geom_point(data = data, aes(x = isolation_year, y = day5_lung_mean)) +
+  theme_bw() + 
+  ylab('Day 5 Lung Titre') + 
+  xlab('Isolation Year')
+
+cowplot::plot_grid(posterior_prediction, conditional_effect, nrow = 1, align = 'h', axis = 'tb')
+
+
+
 
 
 ################################### OUTPUT #####################################
